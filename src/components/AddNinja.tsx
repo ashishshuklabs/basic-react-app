@@ -1,12 +1,5 @@
-import React, {
-  ChangeEvent,
-  FormEvent,
-  MouseEvent,
-  SyntheticEvent,
-  useState,
-} from "react";
+import React, { ChangeEvent, FormEvent, MouseEvent, useState } from "react";
 import iNinja from "./iNinja";
-import Ninjas from "./Ninjas";
 interface IProps {
   addNinja: (ninja: iNinja) => void;
 }
@@ -18,7 +11,7 @@ const AddNinja: React.FC<IProps> = ({ addNinja }) => {
       age: "",
       id: 0,
     });
-  
+  //Setting properties dynamically using event target object
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.currentTarget;
     //newNinja = {...sampleNinja,[id]:value}   
